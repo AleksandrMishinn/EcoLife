@@ -1,7 +1,6 @@
 package com.ecolife.ecolife.jwt.model;
 
 import lombok.Data;
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -31,4 +30,6 @@ public class User extends BaseEntity{
     joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
     inverseJoinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "id")})
     private List<Role> roles;
+
+
 }
